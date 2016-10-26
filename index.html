@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Bring Clojure to your life!</title>
+
+		<meta name="description" content="JVM and FP user group presentation">
+		<meta name="author" content="Andrew Sinclair">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Bring Clojure to Your Life!</h1>
+					<p>
+						<small>
+							By Andrew G. Sinclair
+						</small>
+						<br/>
+						Slides on <a href="https://github.com/AndrewSinclair/jvm-bring-clojure">GitHub</a>
+					</p>
+				</section>
+				
+				<section>
+					<h2>Who am I?</h2>
+					<img src="/images/uofm.gif"/>
+					<img src="/images/dmt_logo.jpg"/>
+				</section>
+				
+				<section>
+					<h2>Only* way to find me!</h2>
+					
+					<ul>
+						<li>GitHub: <a href="https://github.com/AndrewSinclair/">https://github.com/AndrewSinclair/</a></li>
+						<li>Code & Coffee: <a href="http://www.meetup.com/wpgcoffeecode/">http://www.meetup.com/wpgcoffeecode/</a></li>
+						<li>Slack!</li>
+					</ul>
+					<p>
+					<small>* Direct contact info on last slide</small>
+					</p>
+				</section>
+				
+				<section>
+					<h2>Let's talk about Clojure</h2>
+					<img style="width: 25%; border: none;" src="/images/clojure-logo.png"/>
+				</section>
+				
+				<section>
+					<h2>Clojure is...</h2>
+					<blockquote>
+					&ldquo;Clojure is a dynamic, general-purpose programming language,
+					combining the approachability and interactive development of a scripting
+					language with an efficient and robust infrastructure for multithreaded programming.&rdquo;
+					</blockquote>
+				</section>
+				
+				
+				<section>
+					<h2>Familiar Features</h2>
+					<ul>
+						<li>Lazy sequences</li>
+						<li>Immutable and persistent data structures</li>
+						<li>Lambda / Anonymous functions</li>
+						<li>Pattern matching</li>
+						<li>Data destructuring</li>
+						<li>Tail call optimization (TCO)</li>
+						<li>Read-eval-print Loop (REPL)</li>
+						<li>Full suite of ubiquitous, higher-order functions</li>
+					</ul>
+				</section>
+				
+				
+				<section>
+					<h2>Unfamiliar Features</h2>
+					<ul>
+						<li>Lisp
+						<ul>
+							<li>Homoiconic</li>
+							<li>Code-as-data</li>
+							<li>Macro System</li>
+						</ul>
+						</li>
+						
+						<li>Java Interop (JavaScript Interop for Cljs)</li>
+						<li>Dynamic typed</li>
+						<li>Ahead-of-time (AOT) compiled</li>
+					</ul>
+				</section>
+				
+				
+				<section>
+					<h2>Where do you get it?</h2>
+					<p><a href="http://clojure.org/">clojure.org</a></p>
+					<img src="/images/clojure-org.png"/>
+				</section>
+				
+				
+				<section>
+					<h2>How do you use that?</h2>
+					<br/>
+					
+					<div style="width: 100%; text-align: left; border: 1px dotted #AAA; padding: 15px;">
+					<code><span style="font-weight: bold; color: gold";>$</span> java -cp clojure.jar clojure.main</code>
+					<br/>
+					<br/>
+					<code><span style="font-weight: bold; color: gold";>user=></span> (load "some-source-file")</code>
+					</div>
+				</section>
+				
+				
+				<section id="fragments">
+					<h2>Isn't there an easier way?</h2>
+					
+					<img src="/images/leiningen-3.jpg"/>
+					<img class="fragment" style="position: absolute; left: 21px;" src="/images/leiningen-2.jpg">
+				</section>
+				
+				
+				<section>
+					<h2>Leiningen to the Rescue!</h2>
+					
+					<a href="https://leiningen.org">leiningen.org</a>
+					<img src="/images/leiningen-org.png"/>
+				</section>
+				
+				
+				<section>
+					<h2>Command line usage:</h2>
+
+					<ul>
+						<li class="fragment"><code>lein new</code></li>
+						<li class="fragment"><code>lein run</code></li>
+						<li class="fragment"><code>lein test</code></li>
+						<li class="fragment"><code>lein uberjar</code></li>
+					</ul>
+				</section>
+
+				
+				<section>
+					<h2>How do you install dependencies?</h2>
+
+					<image src="/images/dependency-image.png"/>
+					<p>Put this in your <code>project.clj</code></p>
+				</section>
+				
+				
+				<section>
+					<h2>Clojure Code</h2>
+				</section>
+				
+				<section>
+					<iframe class="stretch" src="http://localhost:1337/#0"></iframe>
+				</section>
+
+				
+				<section>
+					<iframe class="stretch" src="http://localhost:1337/#1"></iframe>
+				</section>
+				
+
+				<section>
+					<iframe class="stretch" src="http://localhost:1337/#2"></iframe>
+				</section>
+				
+
+				<section>
+					<iframe class="stretch" src="http://localhost:1337/#3"></iframe>
+				</section>
+				
+
+				<section>
+					<iframe class="stretch" src="http://localhost:1337/#4"></iframe>
+				</section>
+				
+
+				<section>
+					<iframe class="stretch" src="http://localhost:1337/#5"></iframe>
+				</section>
+				
+				
+				<section>
+					<h2>The Syntax Rules</h2>
+					
+					<p>
+					<strong>Everything is a function...*</strong>
+					</p>
+					<br/> <br/>
+					<p>
+					<small>*or data type, but sometimes both!</small>
+					</p>
+				</section>
+				
+
+				<section>
+					<h2>The Syntax Rules (contd.)</h2>
+					
+					<p>...but technically that's not true...</p>
+				</section>
+				
+				
+				<section>
+					<h2>The Syntax Rules (contd.)</h2>
+					<ul>
+						<li>Functions</li>
+						<li>Macros</li>
+						<li>Special Forms</li>
+					</ul>
+				</section>
+				
+				
+				
+				<section>
+					<iframe class="stretch" src="http://localhost:1337/#6"></iframe>
+				</section>
+				
+				<section>
+					<h2>IDE's</h2>
+				</section>
+				
+				<section>
+					<h2>IntelliJ</h2>
+					<p>Uses Cursive</p>
+				</section>
+				
+				<section>
+					<h2>Honorable Mentions</h2>
+					
+					<p>Sublime</p>
+					<p>Emacs</p>
+					<p>Vim</p>
+				</section>
+				
+				<section>
+					<h2>Web Application</h2>
+					<h3>Demo</h3>
+				</section>
+				
+				<section>
+					<h2>Components:</h2>
+					
+					<ul>
+						<li>Build tool - Leiningen</li>
+						<li>Server Middleware - Ring</li>
+						<li>Routing library - Compojure</li>
+						<li>HTML Rendering - Hiccup</li>
+						<li>Database - Postgres (because why not?)</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Recommended Learning Materials</h2>
+		
+					<ul>
+					<li><a href="http://www.tryclj.com/">www.tryclj.com</a></li>
+					<li><a href="https://www.4clojure.com/">4clojure.com</a></li>
+					<li><a href="http://www.braveclojure.com/">Clojure for the Brave and True</a></li>
+					<li><a href="https://github.com/razum2um/awesome-clojure">Awesome Clojure repository</a></li>
+					<li><a href="https://clojuredocs.org/">clojuredocs.org</a></li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Questions?</h2>
+				</section>
+				
+				<section>
+					<h2>Contact Info</h2>
+					
+					<ul>
+						<li>twitter: @Andy_CDandy</li>
+						<li>email: andrew.george.sinclair@gmail.com</li>
+						<li>github: <a href="https://github.com/AndrewSinclair">github.com/AndrewSinclair</a></li>
+					</ul>
+						
+				</section>
+				<!--
+				
+				<section>
+					<h2></h2>
+				</section>
+				
+				-->
+				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					]
+			});
+		</script>
+	</body>
+</html>
